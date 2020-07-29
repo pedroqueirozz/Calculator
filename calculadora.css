@@ -10,18 +10,22 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, rgb(167, 0, 167), rgb(28, 28, 255));
+    background: linear-gradient(135deg, rgb(167, 0, 167), rgb(40, 40, 240));
     font-family: Arial, Helvetica, sans-serif;
+    background-position: right;
+    background-size: 200%;
+    animation: bg-gradient 10s infinite alternate;
 }
 
-/* .calc {
-    width: 513px;
-    height: 692px;
-    background-color: #d7d7d1;
-    border-radius: 50px;
-    border: 4px gray solid;
-    box-shadow: -30px 0 #b6afac, -34px 0 gray;
-} */
+@keyframes bg-gradient {
+    from{
+        background-position: right;
+    }
+
+    to{
+        background-position: left;
+    }
+}
 
 .calc {
     display: flex;
@@ -42,6 +46,7 @@ body {
     font-size: 40px;
     text-align: right;
     /* cursor: default; */
+    transition: background-color .3s;
 }
 
 .calc-buttons {
@@ -68,6 +73,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     user-select: none;
+    transition: background-color .3s;
 }
 
 .clear {
@@ -133,7 +139,7 @@ body {
 
 .equal {
     grid-area: equal;
-    background-color: rgba(137, 184, 129, 0.664);
+    background-color: rgba(114, 184, 102, 0.664);
 }
 
 .change {
@@ -148,10 +154,30 @@ body {
     grid-area: comma;
 }
 
+#label:hover, .percentage:hover, .divide:hover, .multiply:hover, .seven:hover, .eight:hover, .nine:hover, .minus:hover, .four:hover, .five:hover, .six:hover, .plus:hover, .one:hover, .two:hover, .three:hover, .change:hover, .zero:hover, .comma:hover {
+    background-color: rgba(238, 236, 236, 0.664);
+}
+
+.clear:hover {
+    background-color: rgba(233, 142, 142, 0.664);
+}
+
+.equal:hover {
+    background-color: rgba(122, 223, 104, 0.664);
+}
 
 .credits {
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 20px;
+    background-color: rgba(187, 187, 187, 0.664);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 
