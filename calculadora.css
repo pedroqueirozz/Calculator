@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(167, 0, 167), rgb(28, 28, 255));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .calc {
+    width: 513px;
+    height: 692px;
+    background-color: #d7d7d1;
+    border-radius: 50px;
+    border: 4px gray solid;
+    box-shadow: -30px 0 #b6afac, -34px 0 gray;
+} */
+
+.calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#label {
+    width: 390px;
+    height: 90px;
+    margin-bottom: 10px;
+    background-color: rgba(187, 187, 187, 0.664);
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 0 15px;
+    font-size: 40px;
+    text-align: right;
+    /* cursor: default; */
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(5, 90px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "clear percentage divide multiply"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "change zero comma equal"
+}
+
+.clear, .percentage, .divide, .multiply, .seven, .eight, .nine, .minus, .four, .five, .six, .plus, .one, .two, .three, .equal, .change, .zero, .comma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(187, 187, 187, 0.664);
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.clear {
+    grid-area: clear;
+    background-color: rgba(184, 129, 129, 0.664);
+}
+
+.percentage {
+    grid-area: percentage;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.equal {
+    grid-area: equal;
+    background-color: rgba(137, 184, 129, 0.664);
+}
+
+.change {
+    grid-area: change;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.comma {
+    grid-area: comma;
+}
+
+
+.credits {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+
