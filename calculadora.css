@@ -10,20 +10,20 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, rgb(167, 0, 167), rgb(40, 40, 240));
+    background: linear-gradient(135deg, /*rgb(40, 40, 240),*/ rgb(167, 0, 167), rgb(40, 40, 240)/*, rgb(167, 0, 167)*/);
     font-family: Arial, Helvetica, sans-serif;
-    background-position: right;
-    background-size: 200%;
-    animation: bg-gradient 10s infinite alternate;
+    /* background-position: left;
+    background-size: 300%;
+    animation: bg-gradient 10s infinite alternate; */
 }
 
 @keyframes bg-gradient {
     from{
-        background-position: right;
+        background-position: left;
     }
 
     to{
-        background-position: left;
+        background-position: right;
     }
 }
 
@@ -63,7 +63,7 @@ body {
     "change zero comma equal"
 }
 
-.clear, .percentage, .divide, .multiply, .seven, .eight, .nine, .minus, .four, .five, .six, .plus, .one, .two, .three, .equal, .change, .zero, .comma {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,7 +154,7 @@ body {
     grid-area: comma;
 }
 
-#label:hover, .percentage:hover, .divide:hover, .multiply:hover, .seven:hover, .eight:hover, .nine:hover, .minus:hover, .four:hover, .five:hover, .six:hover, .plus:hover, .one:hover, .two:hover, .three:hover, .change:hover, .zero:hover, .comma:hover {
+#label:hover, .button:hover, .credits:hover{
     background-color: rgba(238, 236, 236, 0.664);
 }
 
@@ -172,7 +172,7 @@ body {
     background-color: rgba(187, 187, 187, 0.664);
     padding: 5px;
     border-radius: 5px;
-    
+    transition: background-color .3s;
 }
 
 a {

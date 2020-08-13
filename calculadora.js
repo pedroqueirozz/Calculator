@@ -42,7 +42,6 @@ zero.addEventListener('click', zeroFn)
 comma.addEventListener('click', commaFn)
 equal.addEventListener('click', equalFn)
 
-
 function percentageFn() {
     visor.value = visor.value + '%'
 }
@@ -136,4 +135,3 @@ function equalFn() {
     console.log(eval(result))
     visor.value = eval(result)
 }
-
